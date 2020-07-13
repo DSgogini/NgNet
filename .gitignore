@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/NgNet/config
+/src/NgNet.Server/bin
+/src/NgNet.Server/Migrations
+/src/NgNet.Server/obj/Debug
