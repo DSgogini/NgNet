@@ -2,7 +2,18 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/NgNet/config
-/src/NgNet.Server/bin
-/src/NgNet.Server/Migrations
-/src/NgNet.Server/obj/Debug
+/src/NgNet.Web/bin
+/src/NgNet.Web/Migrations
+/src/NgNet.Web/obj/Debug
+/packages
+/.vs
+*/bin
+/src/NgNet.Application/bin/Debug/netstandard2.1
+/src/NgNet.Application/obj
+/src/NgNet.Core/bin/Debug
+/src/NgNet.Core/obj
+/src/NgNet.Infrastructure/bin/Debug/netcoreapp3.1
+/src/NgNet.Infrastructure/obj
+/src/NgNet.Web/obj
+/src/NgNet.Web/ClientApp/node_module
+/src/NgNet.Web/ClientApp/dist
