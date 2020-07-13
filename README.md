@@ -1,2 +1,12 @@
-# ConsApp
-CRUD operation using ASP.Net Web API and angular 8 with MD bootstrap UI framework.
+
+## Technologies
+* .NET Core 3.1
+* ASP .NET Core 3.1
+* Entity Framework Core 3.1
+* Angular 9
+* MediatR
+* AutoMapper
+* FluentValidation
+* NUnit, FluentAssertions, Moq & Respawn
+
+### Database Migrations
