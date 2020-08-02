@@ -17,3 +17,4 @@
 /src/NgNet.Web/obj
 /src/NgNet.Web/ClientApp/node_module
 /src/NgNet.Web/ClientApp/dist
+/src/NgNet.Client/package-lock.json

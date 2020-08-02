@@ -1,16 +1,10 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NgNet.Infrastructure;
-using NgNet.Infrastructure.Persistence;
 using NgNet.Application.Common.Interfaces;
 using NgNet.Web.Services;
 using System.Linq;
@@ -39,7 +33,6 @@ namespace NgNet.Web
             services.AddHttpContextAccessor();
 
             services.AddScoped<ICurrentUserService, CurrentUserService>();
-
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

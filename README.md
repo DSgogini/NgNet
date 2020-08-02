@@ -10,3 +10,8 @@
 * NUnit, FluentAssertions, Moq & Respawn
 
 ### Database Migrations
+
+
+
+### Front-End References: 
+https://github.com/tomastrajan/angular-ngrx-material-starter
