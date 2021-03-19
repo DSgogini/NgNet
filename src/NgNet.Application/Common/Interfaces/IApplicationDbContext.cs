@@ -10,7 +10,7 @@ namespace NgNet.Application.Common.Interfaces
 {
     public interface IApplicationDbContext
     {
-        DbSet<Employee> Employee { get; set; }
+        DbSet<Employee> Employees { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

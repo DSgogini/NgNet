@@ -28,7 +28,7 @@ namespace NgNet.Application.Employees.Queries
 
         public async Task<EmployeesListVm> Handle(GetEmployeeListQuery request, CancellationToken cancellationToken)
         {
-            var employees = await _context.Employee.ProjectTo<EmployeeDto>(_mapper.ConfigurationProvider)
+            var employees = await _context.Employees.ProjectTo<EmployeeDto>(_mapper.ConfigurationProvider)
                 .OrderBy(e => e.Name).ToListAsync();
 
             return new EmployeesListVm

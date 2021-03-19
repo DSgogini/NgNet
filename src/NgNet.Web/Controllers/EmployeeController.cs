@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NgNet.Application.Employees.Commands;
 using NgNet.Application.Employees.Queries;
 
 namespace NgNet.Web.Controllers
 {
-    [Authorize]
     public class EmployeeController : BaseApiController
     {
 
@@ -15,5 +15,11 @@ namespace NgNet.Web.Controllers
             return await Mediator.Send(new GetEmployeeListQuery());
         }
 
+        [Route("add")]
+        public async Task<IActionResult> Save(SaveEmployeeCommand command)
+        {
+            var id = await Mediator.Send(command);
+            return Ok(id);
+        }
     }
 }

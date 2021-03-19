@@ -1,27 +1,27 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { HomeComponent } from "./components/home/home.component";
+import { AddEmployeeComponent } from "./components/add-employee/add-employee-component";
+import { MasterComponent } from "./components/master/master.component";
+import { EditEmployeeComponent } from './components/edit-employee/edit-employee-component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'about',
-    pathMatch: 'full'
+    path: "",
+    component: MasterComponent,
+    children: [{ path: "", component: HomeComponent },
+    { path: "add-employee", component: AddEmployeeComponent },
+    { path: "edit-employee", component: EditEmployeeComponent }]
   },
   {
-    path: '**',
-    redirectTo: 'about'
-  }
+    path: "home",
+    component: MasterComponent,
+    children: [{ path: "", component: HomeComponent }]
+  },
 ];
 
 @NgModule({
-  // useHash supports github.io demo page, remove in your app
-  imports: [
-    RouterModule.forRoot(routes, {
-      useHash: true,
-      scrollPositionRestoration: 'enabled',
-      preloadingStrategy: PreloadAllModules
-    })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

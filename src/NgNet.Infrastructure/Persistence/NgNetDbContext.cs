@@ -30,7 +30,7 @@ namespace NgNet.Infrastructure.Persistence
             _dateTime = dateTime;
         }
 
-        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {

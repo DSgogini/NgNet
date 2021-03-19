@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using NgNet.Application.Common.Interfaces;
+using NgNet.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -38,9 +39,38 @@ namespace NgNet.Application.Employees.Commands
             _context = context;
         }
 
-        public Task<int> Handle(SaveEmployeeCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(SaveEmployeeCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            Employee entity;
+            if (request.Id.HasValue)
+            {
+                entity = await _context.Employees.FindAsync(request.Id.Value);
+            }
+            else
+            {
+                entity = new Employee();
+                _context.Employees.Add(entity);
+            }
+
+            entity.TitleOfCourtesy = request.Title;
+            entity.FirstName = request.FirstName;
+            entity.LastName = request.LastName;
+            entity.BirthDate = request.DOB;
+            entity.Address = request.Address;
+            entity.City = request.City;
+            entity.Region = request.Region;
+            entity.PostalCode = request.PostalCode;
+            entity.Country = request.Country;
+            entity.HomePhone = request.HomePhone;
+            entity.Title = request.Designation;
+            entity.Extension = request.Extension;
+            entity.HireDate = request.HireDate;
+            entity.Notes = request.Notes;
+            entity.Photo = request.Photo;
+            entity.ReportsTo = request.ManagerId;
+
+            await _context.SaveChangesAsync(cancellationToken);
+            return entity.EmployeeId;
         }
     }
 }

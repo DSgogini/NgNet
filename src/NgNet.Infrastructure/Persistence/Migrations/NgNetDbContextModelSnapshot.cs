@@ -316,7 +316,7 @@ namespace NgNet.Infrastructure.Persistence.Migrations
 
                     b.HasIndex("ManagerEmployeeId");
 
-                    b.ToTable("Employee");
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("NgNet.Infrastructure.Identity.ApplicationUser", b =>
