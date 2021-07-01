@@ -15,7 +15,7 @@ import { SharedComponent } from "../shared/shared.component";
 @Injectable({
   providedIn: "root"
 })
-export class ConsHttpInterceptor implements HttpInterceptor {
+export class NgNetInterceptor implements HttpInterceptor {
   constructor(private http: HttpClient) {}
 
   intercept(

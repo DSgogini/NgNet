@@ -11,7 +11,10 @@ import { Router } from '@angular/router';
 export class AddEmployeeComponent {
   AddEmployeeForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder,private _empService: EmployeeService,private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private _empService: EmployeeService,
+    private router: Router) { }
 
   ngOnInit() {
     this.AddEmployeeForm = this.formBuilder.group({

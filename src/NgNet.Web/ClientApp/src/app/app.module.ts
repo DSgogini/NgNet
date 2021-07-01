@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { ConsHttpInterceptor } from './interceptors/cons.interceptor';
+import { ConsHttpInterceptor } from './interceptors/ngnet-interceptor';
 import { AddEmployeeComponent } from './components/add-employee/add-employee-component';
 import { MasterComponent } from './components/master/master.component';
 import { FooterComponent } from './components/footer/footer.component';
